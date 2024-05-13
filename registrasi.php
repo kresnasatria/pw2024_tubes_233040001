@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +7,33 @@
     <title>Halaman Registrasi</title>
     <style>
         body {
-            background: #050617;
+            background-image: linear-gradient(to bottom right, blue, purple);
         }
 
         .registrasi {
             width: 500px;
             height: 300px;
-            background: #C04809;
+            background: #fff;
             position: absolute;
             left: 30%;
             top: 20%;
             padding: 10px;
             border-radius: 5px;
+            border:2px solid black;
+            box-shadow:2px 2px 2px black;
             
         }
 
         h1 {
+            position: relative;
+            width: 300px;
+            height: 40px;
+            background-image: linear-gradient(to bottom right, blue, purple);
             text-align: center; 
+            left: 19%;
+            border-radius: 50px;
+            color: #fff;
+            box-shadow: 3px 3px 3px black;
         }
 
         ul {
@@ -30,12 +41,28 @@
             margin-top: 50px;
         }
 
-        label {
-            display: block;
+        li {
+            list-style: none;
         }
 
         input {
             width: 300px;
+            height: 20px;
+            background: lightblue;
+            box-shadow: 1px 2px 2px black;
+        }
+
+        button {
+            background: #405DE6;
+            color: #fff;
+            position: absolute;
+            left: 40%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-image: linear-gradient(to bottom right, blue, purple);
         }
     </style>
 </head>
@@ -45,16 +72,15 @@
         <form action="" method="post">
             <ul>
                 <li>
-                    <label for="username">username :</label>
-                    <input type="text" name="username" id="username">
+                    <input type="text" placeholder="USERNAME" name="username" id="username">
                 </li>
+                <br>
                 <li>
-                    <label for="password">password :</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" placeholder="PASSWORD" name="password" id="password">
                 </li>
+                <br>
                 <li>
-                    <label for="password2">confirm password :</label>
-                    <input type="password" name="password2" id="passsword2">
+                    <input type="password" placeholder="CONFIRM PASSWORD" name="password2" id="passsword2">
                 </li>
                 <br>
                 <li>
