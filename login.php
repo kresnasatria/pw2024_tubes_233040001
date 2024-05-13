@@ -78,7 +78,7 @@
 
         .register a:hover {
             color: #fff;
-            background-image: linear-gradient(to bottom right, blue, purple);
+            background-image: linear-gradient(to bottom right, blue, lightblue);
         }
     </style>
 </head>
