@@ -10,10 +10,10 @@ function query ($query) {
   // Koneksi ke database
   $conn = koneksi();
 
-  //query isi tabel mahasiswa
+  //query isi tabel guru
   $result = mysqli_query ($conn, $query);
   
-  //menyiapkan data mahasiswa
+  //menyiapkan data guru
   $rows = [];
   while ($row = mysqli_fetch_assoc($result)){
     $rows[] = $row;
@@ -32,7 +32,7 @@ function tambah($data)
   $Email = htmlspecialchars($data['email']);    
   $kelas = htmlspecialchars($data['kelas']);  
 
-  $query = "INSERT INTO mahasiswa
+  $query = "INSERT INTO guru
               VALUES (null, '$nama', '$hp', '$Email', '$kelas')
            ";
   mysqli_query($conn, $query) or die(mysqli_error($conn));
