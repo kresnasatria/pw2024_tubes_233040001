@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -163,7 +164,8 @@
             <div class="card" style="width: 15rem;">
               <img src="img/visual.jpg" class="card-img-top" alt="visual" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #000;">Visual Effects</h5>
+                <h3 class="card-title" style="color: rgb(216, 108, 19);">Visual Effects</h3>
+                <h5 class="card-title" style="color: #000;">Teacher: Jack Gussion</h5>
                 <p class="card-text">Our teacher will teach visual effects material using after effects software.</p>
                 <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
               </div>
@@ -175,7 +177,8 @@
             <div class="card" style="width: 15rem">
               <img src="img/videography.avif" class="card-img-top" alt="videography" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #000;">Videography</h5>
+                <h3 class="card-title" style="color: rgb(216, 108, 19);">Videography</h3>
+                <h5 class="card-title" style="color: #000;">Teacher: Maria Rein</h5>
                 <p class="card-text">Our teacher will teach material about videography. We use Premiere Pro.</p>
                 <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
               </div>
@@ -187,7 +190,8 @@
             <div class="card" style="width: 15rem">
               <img src="img/photography.jpg" class="card-img-top" alt="photography" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #000;">Photography</h5>
+                <h3 class="card-title" style="color: rgb(216, 108, 19);">Photography</h3>
+                <h5 class="card-title" style="color: #000;">Teacher: Ally Gill </h5>
                 <p class="card-text">Our teacher will teach Commercial Advertising photography.</p>
                 <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
               </div>
@@ -199,7 +203,8 @@
             <div class="card" style="width: 15rem">
               <img src="img/sound.jpg" class="card-img-top" alt="sound" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #000;">Sound Design</h5>
+                <h3 class="card-title" style="color: rgb(216, 108, 19);">Sound Design</h3>
+                <h5 class="card-title" style="color: #000;">Teacher: Andrew Cray</h5>
                 <p class="card-text">Our teacher will teach you the effective sound design process.</p>
                 <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
               </div>

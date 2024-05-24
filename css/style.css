@@ -231,7 +231,7 @@ nav ul li .link:hover {
 
 #subject {
   padding: var(--sectionPadding);
-  background: var(--fourthBackgroundColor);
+  background-color: var(--fourthBackgroundColor);
   margin-top: -100px;
   padding-top: 120px;
 }
