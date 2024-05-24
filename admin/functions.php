@@ -29,11 +29,11 @@ function tambah($data)
   $conn = koneksi();
   $nama = htmlspecialchars($data['nama_guru']);
   $hp = htmlspecialchars($data['no_hp']);
-  $Email = htmlspecialchars($data['email']);    
+  $email = htmlspecialchars($data['email']);    
   $kelas = htmlspecialchars($data['kelas']);  
 
   $query = "INSERT INTO guru
-              VALUES (null, '$nama', '$hp', '$Email', '$kelas')
+              VALUES (null, '$nama', '$hp', '$email', '$kelas')
            ";
   mysqli_query($conn, $query) or die(mysqli_error($conn));
 
