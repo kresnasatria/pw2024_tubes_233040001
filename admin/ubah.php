@@ -1,11 +1,18 @@
 <?php
-require '../admin/functions.php';
-//jika tombol tambah di klik
-if(isset($_POST['tambah'])){
-    // jika data berhasil ditambahkan
-    if(tambah($_POST) > 0) {
+require 'functions.php';
+
+$id = $_GET['id'];
+$gurus = query("SELECT * FROM guru WHERE id = $id")[0];
+
+
+
+
+//jika tombol ubah di klik
+if(isset($_POST['ubah'])){
+    // jika data berhasil diubah
+    if(ubah($_POST) > 0) {
         echo"<script>
-                alert('data berhasil ditambahkan');
+                alert('data berhasil diubah');
                 document.location.href = 'admin.php';
             </script>";
     }
@@ -27,26 +34,27 @@ if(isset($_POST['tambah'])){
 <body>
 
     <div class="container col-8">
-    <H1>Form Tambah Data Guru</H1>
+    <H1>Form Ubah Data Guru</H1>
 
     <form action="" method="POST">
+        <input type="hidden" name="id" value="<?= $gurus['id']; ?>">
         <div class="mb-3">
     <label for="nama" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="nama_guru" name="nama_guru" required>
+    <input type="text" class="form-control" id="nama_guru" name="nama_guru" required value="<?= $gurus['nama_guru'];?>">
         </div>
     <div class="mb-3">
-    <label for="nim" class="form-label">No HP</label>
-    <input type="text" class="form-control" id="no_hp" name="no_hp" required>
+    <label for="nim" class="form-label">No Hp</label>
+    <input type="text" class="form-control" id="no_hp" name="no_hp" required value="<?= $gurus['no_hp'];?>">
         </div>
     <div class="mb-3">
     <label for="nim" class="form-label">Email</label>
-    <input type="text" class="form-control" id="email" name="email"required>
+    <input type="text" class="form-control" id="email" name="email"required value="<?= $gurus['email'];?>">
         </div>
     <div class="mb-3">
     <label for="jurusan" class="form-label">Kelas</label>
-    <input type="text" class="form-control" id="kelas" name="kelas" required>
+    <input type="text" class="form-control" id="kelas" name="kelas" required value="<?= $gurus['kelas'];?>">
         </div>
-        <button type="submit" name="tambah" class="btn btn-primary">Tambah Data</button>
+        <button type="submit" name="ubah" class="btn btn-primary">Ubah Data</button>
     </form>
     </div>
 

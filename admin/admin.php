@@ -44,8 +44,8 @@ foreach($guru as $gurus) : ?>
       <td><?= $gurus['email']; ?></td>
       <td><?= $gurus['kelas']; ?></td>
       <td>
-        <a href="#" class="badge text-bg-warning text-decoration-none">ubah</a>
-        <a href="#" class="badge text-bg-danger text-decoration-none">hapus</a>
+        <a href="ubah.php?id=<?= $gurus['id']; ?>" class="badge text-bg-warning text-decoration-none">ubah</a>
+        <a href="hapus.php?id=<?= $gurus['id']; ?>" onclick="return confirm('yakin?');" class="badge text-bg-danger text-decoration-none">hapus</a>
       </td>
     </tr>
 
