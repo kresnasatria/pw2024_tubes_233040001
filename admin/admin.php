@@ -1,4 +1,12 @@
 <?php
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+   header('location:login_form.php');
+}
+
 require '../admin/functions.php';
 $guru = query("SELECT * FROM guru");
 ?>
@@ -20,6 +28,7 @@ $guru = query("SELECT * FROM guru");
 		<h1>Daftar Guru</h1>
 
     <a href="tambah.php" class="btn btn-primary">Tambah Data Guru</a>
+    <a href="../logout.php" class="btn btn-primary">Logout</a>
 
 		<table class="table">
   <thead>

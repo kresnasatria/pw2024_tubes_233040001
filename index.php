@@ -35,7 +35,7 @@ $guru = query("SELECT * FROM guru");
               <li><a class="link" href="#subject">Subjects</a></li>
               <li><a class="link" href="#teachers">Teachers</a></li>
               <li><a class="link" href="#contact">Contact</a></li>
-              <li><a class="btn" href="login.php">Login</a></li>
+              <li><a class="btn" href="login_form.php">Logout</a></li>
             </ul>
           </nav>
 
