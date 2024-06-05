@@ -2,20 +2,28 @@
 include 'config_customers.php';
 
 if(isset($_POST['book_now'])) {
-   $name = $_POST['name'];
-   $email = $_POST['email'];
-   $phone_number = $_POST['phone_number'];
-   $address = $_POST['address'];
-   $class = $_POST['class'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone_number = $_POST['phone_number'];
+    $address = $_POST['address'];
+    $class = $_POST['class'];
 
-   $query = "INSERT INTO booking(name, email, phone_number, address, class) VALUES('$name', '$email', '$phone_number', '$address', '$class')";
-   mysqli_query($conn, $query); 
-   header('location: index.php');
+    // Prepare an insert statement
+    $stmt = $conn->prepare("INSERT INTO booking (name, email, phone_number, address, class) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $name, $email, $phone_number, $address, $class);
+
+    if ($stmt->execute()) {
+        echo "<script>
+                alert('Booked successfully');
+                document.location.href = 'index.php';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Booking failed');
+              </script>";
+    }
+    $stmt->close();
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +32,7 @@ if(isset($_POST['book_now'])) {
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>booking form</title>
+   <title>Booking Form</title>
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/auth.css">
@@ -35,14 +43,14 @@ if(isset($_POST['book_now'])) {
 <div class="form-container">
 
    <form action="" method="post">
-      <h3>booking form</h3>
+      <h3>Booking Form</h3>
       
-      <input type="text" name="name" id="name" required placeholder="NAME">
-      <input type="email" name="email" id="email" required placeholder="EMAIL">
-      <input type="text" name="phone_number" id="phone_number" required placeholder="PHONE NUMBER">
-      <input type="text" name="address" id="address" required placeholder="ADDRESS">
-      <input type="text" name="class" id="address" required placeholder="CLASS">
-      <input type="submit" name="book_now" value="book now" class="form-btn">
+      <input type="text" name="name" id="name" required placeholder="Name">
+      <input type="email" name="email" id="email" required placeholder="Email">
+      <input type="text" name="phone_number" id="phone_number" required placeholder="Phone Number">
+      <input type="text" name="address" id="address" required placeholder="Address">
+      <input type="text" name="class" id="class" required placeholder="Class">
+      <input type="submit" name="book_now" value="Book Now" class="form-btn">
    </form>
 
 </div>
