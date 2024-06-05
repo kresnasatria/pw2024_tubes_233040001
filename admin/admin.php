@@ -22,7 +22,7 @@ if( isset($_POST["cari"]) ) {
   <body>
 
   <div class="container">
-		<h1>Daftar Guru</h1>
+		<h1  style="text-align: center;">Daftar Guru</h1>
 
     <a href="tambah.php" class="btn btn-primary">Tambah Data Guru</a>
     <a href="../logout.php" class="btn btn-primary">Logout</a>
@@ -57,7 +57,7 @@ foreach($guru as $gurus) : ?>
       <td><?= $gurus['email']; ?></td>
       <td><?= $gurus['kelas']; ?></td>
       <td>
-        <a href="ubah.php?id=<?= $gurus['id']; ?>" class="badge text-bg-warning text-decoration-none">ubah</a>
+        <a href="ubah.php?id=<?= $gurus['id']; ?>" class="badge text-bg-success text-decoration-none">ubah</a>
         <a href="hapus.php?id=<?= $gurus['id']; ?>" onclick="return confirm('yakin?');" class="badge text-bg-danger text-decoration-none">hapus</a>
       </td>
     </tr>
