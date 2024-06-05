@@ -1,14 +1,10 @@
 <?php
-@include 'config.php';
-
-session_start();
-
-if(!isset($_SESSION['admin_name'])){
-   header('location:login_form.php');
-}
-
 require '../admin/functions.php';
-$guru = query("SELECT * FROM guru");
+$guru = query("SELECT * FROM guru" );
+
+if( isset($_POST["cari"]) ) {
+  $guru = cari($_POST["keyword"]);
+}
 ?>
 
 
@@ -20,6 +16,7 @@ $guru = query("SELECT * FROM guru");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Halaman Admin | Daftar Guru</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/admin.css">
   </head>
 
   <body>
@@ -29,8 +26,15 @@ $guru = query("SELECT * FROM guru");
 
     <a href="tambah.php" class="btn btn-primary">Tambah Data Guru</a>
     <a href="../logout.php" class="btn btn-primary">Logout</a>
+    <br><br>
+    <form action="" method="post">
+      <input type="text" name="keyword" size="40"  placeholder="SEARCH" autocomplete="off">
+      <button type="submit" name="cari">Cari!</button>
+    </form>
+    <br><br>
 
-		<table class="table">
+
+	<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>

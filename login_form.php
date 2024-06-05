@@ -1,8 +1,8 @@
 <?php
-
 @include 'config.php';
 
 session_start();
+
 
 if(isset($_POST['submit'])){
 
@@ -19,14 +19,11 @@ if(isset($_POST['submit'])){
    if(mysqli_num_rows($result) > 0){
 
       $row = mysqli_fetch_array($result);
-
       if($row['user_type'] == 'admin'){
-
          $_SESSION['admin_name'] = $row['name'];
          header('location:admin/admin.php');
 
       }elseif($row['user_type'] == 'user'){
-
          $_SESSION['user_name'] = $row['name'];
          header('location:index.php');
 
@@ -37,6 +34,7 @@ if(isset($_POST['submit'])){
    }
 
 };
+
 ?>
 
 <!DOCTYPE html>

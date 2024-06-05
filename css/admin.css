@@ -1,0 +1,40 @@
+body {
+    background-image: url(../img/admin_background.jpg);
+}
+
+.container {
+    background-color: #44533f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 3px #44533f;
+    margin-top: 70px;
+    opacity: .8;
+    
+    /* padding: 0 10px 0 10px; */
+}
+
+h1 {
+    color: #fff;
+}  
+
+input {
+    box-shadow: 1px 1px 3px #fff;
+    border-radius: 5px;
+}
+
+.btn {
+    box-shadow: 1px 1px 3px lightblue;
+}
+
+button {
+    box-shadow: 1px 1px 1px #fff;
+    border-radius: 5px;
+}
+
+.table .tr .th {
+    background-color: blue;
+}
+
+
+
+

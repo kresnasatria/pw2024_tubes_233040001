@@ -1,6 +1,5 @@
 <?php
-require 'admin/functions.php';
-$guru = query("SELECT * FROM guru");
+
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +28,13 @@ $guru = query("SELECT * FROM guru");
             <a href="#">KursusPrivat.</a>
           </div>
 
+          
+          <div class="search">
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width: 450px; margin-top: 20px; margin-left: 60px; cursor: pointer;">  
+          </div>
+          <button type="submit" name="cari" style="width: 35px; height: 40px; margin-top: 18px; margin-left: -222px; background-color: rgb(216, 108, 19);"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15.97 17.031c-1.479 1.238-3.384 1.985-5.461 1.985-4.697 0-8.509-3.812-8.509-8.508s3.812-8.508 8.509-8.508c4.695 0 8.508 3.812 8.508 8.508 0 2.078-.747 3.984-1.985 5.461l4.749 4.75c.146.146.219.338.219.531 0 .587-.537.75-.75.75-.192 0-.384-.073-.531-.22zm-5.461-13.53c-3.868 0-7.007 3.14-7.007 7.007s3.139 7.007 7.007 7.007c3.866 0 7.007-3.14 7.007-7.007s-3.141-7.007-7.007-7.007z" fill-rule="nonzero"/></svg></button>
+
+          
           <nav>
             <ul>
               <li><a class="link" href="#hero">About</a></li>
@@ -47,7 +53,7 @@ $guru = query("SELECT * FROM guru");
         </div>
 
         <div class="gambar">
-          <img src="img/header2.jpg" alt="hero" />
+          <img src="img/header5.jpg" alt="hero"/>
         </div>
 
         <section id="hero" data-aos="fade-right" data-aos-duration="1800">
@@ -135,7 +141,7 @@ $guru = query("SELECT * FROM guru");
            
             <div class="skills-list">
               <ul>
-                <p>*For clients who want a private teacher to come to your place</p>
+                <p>For clients who want a private teacher to come to your place</p>
                 <p>A computer is required with the software installed below*</p>
                 <li>Adobe After Effects</li>
                 <li>Adobe Pemiere Pro</li>
@@ -167,7 +173,7 @@ $guru = query("SELECT * FROM guru");
             <div class="card" style="width: 15rem;">
               <img src="img/visual.jpg" class="card-img-top" alt="visual" />
               <div class="card-body">
-                <h3 class="card-title" style="color: rgb(216, 108, 19);">Visual Effects</h3>
+                <h3 class="card-title" style="color: rgb(216, 108, 19);">Visual Effects</h3>              
                 <h5 class="card-title" style="color: #000;">Teacher: Jack Gussion</h5>
                 <p class="card-text">Our teacher will teach visual effects material using after effects software.</p>
                 <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
@@ -252,13 +258,13 @@ $guru = query("SELECT * FROM guru");
                 <p>Taman Puri Lestari A6 No 9</p>
               </div>
                 </div>
-              <!-- Contact Iten - 2 -->
+              <!-- Contact Item - 2 -->
                 <div class="contact-item" data-aos="fade-left" data-aos-duration-2000 data-aos-delay="200">
                   <div class="contact-item-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>                  </div>
                   <div class="contact-item-detail">
                     <h4>Phone</h4>
-                    <p>+62 857-9738-5431</p>
+                    <p>+62 877-7888-9214</p>
                   </div>
                   </div>
                   <!-- Contact Item - 3 -->
@@ -267,7 +273,7 @@ $guru = query("SELECT * FROM guru");
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>                    </div>
                     <div class="contact-item-detail">
                       <h4>Email</h4>
-                      <p>kresnasatria@gmail.com</p>
+                      <p>kresnasatria160@gmail.com</p>
                     </div>
                     </div>
               </div>

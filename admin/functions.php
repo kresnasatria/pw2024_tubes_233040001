@@ -2,7 +2,7 @@
 
 function koneksi () {
   // Koneksi ke database
-  $conn = mysqli_connect('localhost', 'root', '','tabelguru_233040001');
+  $conn = mysqli_connect('localhost', 'root', '','tabelguru');
   return $conn;
 }
 
@@ -66,6 +66,14 @@ function ubah($data)
   mysqli_query($conn, $query) or die(mysqli_error($conn));
 
   return mysqli_affected_rows($conn);
+}
+
+function cari($keyword) {
+  $query = "SELECT * FROM guru 
+             WHERE
+            nama_guru = '$keyword'
+           ";
+  return query($query);  
 }
 
 

@@ -126,6 +126,7 @@
 
 .form-container form p a:hover {
     background: darkblue;
+    color: white;
 }
 
 .form-container form .error-msg{
