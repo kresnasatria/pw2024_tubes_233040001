@@ -27,7 +27,7 @@ if(isset($_POST['book_now'])) {
    <title>booking form</title>
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style2.css">
+   <link rel="stylesheet" href="css/auth.css">
 
 </head>
 <body>
