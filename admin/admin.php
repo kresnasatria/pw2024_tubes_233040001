@@ -40,6 +40,7 @@ if( isset($_POST["cari"]) ) {
       <th scope="col">#</th>
       <th scope="col">NAMA</th>
       <th scope="col">NO HP</th>
+      <th scope="col">DESKRIPSI</th>
       <th scope="col">Email</th>
       <th scope="col">KELAS</th>
       <th scope="col">AKSI</th>
@@ -54,6 +55,7 @@ foreach($guru as $gurus) : ?>
       <th scope="row"><?= $i; ?></th>
       <td><?= $gurus['nama_guru']; ?></td>
       <td><?= $gurus['no_hp']; ?></td>
+      <td><?= $gurus['description']; ?></td>
       <td><?= $gurus['email']; ?></td>
       <td><?= $gurus['kelas']; ?></td>
       <td>

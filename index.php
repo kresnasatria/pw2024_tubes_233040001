@@ -1,5 +1,5 @@
 <?php
-
+require 'functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
 
           
           <div class="search">
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." style="width: 450px; margin-top: 20px; margin-left: 60px; cursor: pointer;">  
+                <input class="form-control" list="datalistOptions" id="exampleDataList" name="cari" placeholder="Type to search..." style="width: 450px; margin-top: 20px; margin-left: 60px; cursor: pointer;">  
           </div>
           <button type="submit" name="cari" style="width: 35px; height: 40px; margin-top: 18px; margin-left: -222px; background-color: rgb(216, 108, 19);"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15.97 17.031c-1.479 1.238-3.384 1.985-5.461 1.985-4.697 0-8.509-3.812-8.509-8.508s3.812-8.508 8.509-8.508c4.695 0 8.508 3.812 8.508 8.508 0 2.078-.747 3.984-1.985 5.461l4.749 4.75c.146.146.219.338.219.531 0 .587-.537.75-.75.75-.192 0-.384-.073-.531-.22zm-5.461-13.53c-3.868 0-7.007 3.14-7.007 7.007s3.139 7.007 7.007 7.007c3.866 0 7.007-3.14 7.007-7.007s-3.141-7.007-7.007-7.007z" fill-rule="nonzero"/></svg></button>
 
@@ -156,6 +156,9 @@
     </section>
     <!-- END OF SUBJECTS -->
 
+    <?php
+  $teachers = query('SELECT * FROM guru');    
+    ?>
     <!-- TEACHERS  -->
     <section id="teachers">
 
@@ -169,57 +172,23 @@
         <div class="row pt-3" data-aos="fade-up" data-aos-duration-2000>
 
       <!-- TEACHER 1 -->
+      <?php
+      foreach( $teachers as $teacher ) :
+      ?>
           <div class="col-md-3 mb-3">
             <div class="card" style="width: 15rem;">
               <img src="img/visual.jpg" class="card-img-top" alt="visual" />
               <div class="card-body">
-                <h3 class="card-title" style="color: rgb(216, 108, 19);">Visual Effects</h3>              
-                <h5 class="card-title" style="color: #000;">Teacher: Jack Gussion</h5>
-                <p class="card-text">Our teacher will teach visual effects material using after effects software.</p>
+                <h3 class="card-title" style="color: rgb(216, 108, 19);"><?= $teacher['kelas']?></h3>              
+                <h5 class="card-title" style="color: #000;">Teacher: <?= $teacher['nama_guru']?></h5>
+                <p class="card-text"><?= $teacher['description']?></p>
                 <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
               </div>
             </div>
           </div>
-
-      <!-- TEACHER 2 -->
-          <div class="col-md-3 mb-3"  data-aos="fade-up" data-aos-duration-2000 data-aos-delay="200">
-            <div class="card" style="width: 15rem">
-              <img src="img/videography.avif" class="card-img-top" alt="videography" />
-              <div class="card-body">
-                <h3 class="card-title" style="color: rgb(216, 108, 19);">Videography</h3>
-                <h5 class="card-title" style="color: #000;">Teacher: Maria Rein</h5>
-                <p class="card-text">Our teacher will teach material about videography. We use Premiere Pro.</p>
-                <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
-              </div>
-            </div>
-          </div>
-
-      <!-- TEACHER 3 -->
-          <div class="col-md-3 mb-3"  data-aos="fade-up" data-aos-duration-2000 data-aos-delay="300">
-            <div class="card" style="width: 15rem">
-              <img src="img/photography.jpg" class="card-img-top" alt="photography" />
-              <div class="card-body">
-                <h3 class="card-title" style="color: rgb(216, 108, 19);">Photography</h3>
-                <h5 class="card-title" style="color: #000;">Teacher: Ally Gill </h5>
-                <p class="card-text">Our teacher will teach Commercial Advertising photography.</p>
-                <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
-              </div>
-            </div>
-          </div>
-
-      <!-- TEACHER 4 -->
-          <div class="col-md-3 mb-3"  data-aos="fade-up" data-aos-duration-2000 data-aos-delay="300">
-            <div class="card" style="width: 15rem">
-              <img src="img/sound.jpg" class="card-img-top" alt="sound" />
-              <div class="card-body">
-                <h3 class="card-title" style="color: rgb(216, 108, 19);">Sound Design</h3>
-                <h5 class="card-title" style="color: #000;">Teacher: Andrew Cray</h5>
-                <p class="card-text">Our teacher will teach you the effective sound design process.</p>
-                <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
-              </div>
-            </div>
-          </div>
-      </div>
+          <?php
+      endforeach;
+      ?>
     </section>
 
 

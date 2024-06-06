@@ -47,6 +47,9 @@ if(isset($_POST['ubah'])){
     <label for="nim" class="form-label">No Hp</label>
     <input type="text" class="form-control" id="no_hp" name="no_hp" required value="<?= $gurus['no_hp'];?>">
         </div>
+    <label for="nim" class="form-label">Deskripsi</label>
+    <input type="text" class="form-control" id="description" name="description" required value="<?= $gurus['description'];?>">
+        <div>
     <div class="mb-3">
     <label for="nim" class="form-label">Email</label>
     <input type="text" class="form-control" id="email" name="email"required value="<?= $gurus['email'];?>">

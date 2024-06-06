@@ -39,6 +39,11 @@ if(isset($_POST['tambah'])){
     <label for="nim" class="form-label">No HP</label>
     <input type="text" class="form-control" id="no_hp" name="no_hp" required>
         </div>
+        <div class="mb-3">
+    <label for="nim" class="form-label">Deskripsi</label>
+    <input type="text" class="form-control" id="description" name="description" required>
+        </div>
+    </form>
     <div class="mb-3">
     <label for="nim" class="form-label">Email</label>
     <input type="text" class="form-control" id="email" name="email"required>
