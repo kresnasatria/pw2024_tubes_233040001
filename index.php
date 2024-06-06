@@ -52,11 +52,14 @@ require 'functions.php';
           </div>
         </div>
 
-        <div class="gambar">
+        
+      </div>
+    </header>
+    <div class="gambar">
           <img src="img/header5.jpg" alt="hero"/>
         </div>
 
-        <section id="hero" data-aos="fade-right" data-aos-duration="1800">
+        <section class="main-container" id="hero" data-aos="fade-right" data-aos-duration="1800">
           <div class="hero-left">
             <div class="h3 pre-title">Welcome to</div>
             <h1 class="hero-name" data-aos="zoom-in" data-aos-duration="2000">Kursus<span> Privat</span></h1>
@@ -69,8 +72,6 @@ require 'functions.php';
             <img src="img/logo3.jpg" alt="hero" />
           </div>
         </section>
-      </div>
-    </header>
     <!-- END OF HEADER -->
 
      <!-- SUBJECTS -->

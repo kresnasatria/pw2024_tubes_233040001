@@ -205,8 +205,8 @@ nav ul li .link:hover {
 
 .gambar img {
   margin-top: 85px; 
-  margin-left: -90px;
-  width: 1500px;
+  /* margin-left: -90px; */
+  width: 100%;
   height: 350px; 
 }
 
