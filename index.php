@@ -187,7 +187,7 @@ if( isset($_POST["cari"]) ) {
                 <h3 class="card-title" style="color: rgb(216, 108, 19);"><?= $teacher['kelas'] ?></h3>              
                 <h5 class="card-title" style="color: #000;">Teacher: <?= $teacher['nama_guru'] ?></h5>
                 <p class="card-text"><?= $teacher['description'] ?></p>
-                <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
+                <a href="booking.php" class="btn btn-primary position-relative bottom-0 start-50 translate-middle-x">BOOK NOW</a>
               </div>
             </div>
           </div>
