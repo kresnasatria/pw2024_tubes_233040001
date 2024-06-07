@@ -1,5 +1,9 @@
 <?php
 require 'functions.php';
+
+if( isset($_POST["cari"]) ) {
+  $teachers = cari($_POST["keyword"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +45,7 @@ require 'functions.php';
               <li><a class="link" href="#subject">Subjects</a></li>
               <li><a class="link" href="#teachers">Teachers</a></li>
               <li><a class="link" href="#contact">Contact</a></li>
-              <li><a class="btn" href="login_form.php">Logout</a></li>
+              <li><a class="btn" href="logout.php">Logout</a></li>
             </ul>
           </nav>
 
@@ -178,11 +182,11 @@ require 'functions.php';
       ?>
           <div class="col-md-3 mb-3">
             <div class="card" style="width: 15rem;">
-              <img src="img/visual.jpg" class="card-img-top" alt="visual" />
+              <img src="img_teachers/<?= $teacher['gambar'] ?>" class="card-img-top" alt="visual" />
               <div class="card-body">
-                <h3 class="card-title" style="color: rgb(216, 108, 19);"><?= $teacher['kelas']?></h3>              
-                <h5 class="card-title" style="color: #000;">Teacher: <?= $teacher['nama_guru']?></h5>
-                <p class="card-text"><?= $teacher['description']?></p>
+                <h3 class="card-title" style="color: rgb(216, 108, 19);"><?= $teacher['kelas'] ?></h3>              
+                <h5 class="card-title" style="color: #000;">Teacher: <?= $teacher['nama_guru'] ?></h5>
+                <p class="card-text"><?= $teacher['description'] ?></p>
                 <a href="booking.php" class="btn btn-primary">BOOK NOW</a>
               </div>
             </div>

@@ -1,5 +1,5 @@
 <?php
-require '../admin/functions.php';
+require '../functions.php';
 $guru = query("SELECT * FROM guru" );
 
 if( isset($_POST["cari"]) ) {
@@ -39,6 +39,7 @@ if( isset($_POST["cari"]) ) {
     <tr>
       <th scope="col">#</th>
       <th scope="col">NAMA</th>
+      <th scope="col">Gambar</th>
       <th scope="col">NO HP</th>
       <th scope="col">DESKRIPSI</th>
       <th scope="col">Email</th>
@@ -54,6 +55,7 @@ foreach($guru as $gurus) : ?>
     <tr>
       <th scope="row"><?= $i; ?></th>
       <td><?= $gurus['nama_guru']; ?></td>
+      <td><?= $gurus['gambar']; ?></td>
       <td><?= $gurus['no_hp']; ?></td>
       <td><?= $gurus['description']; ?></td>
       <td><?= $gurus['email']; ?></td>
@@ -65,7 +67,7 @@ foreach($guru as $gurus) : ?>
     </tr>
 
     <?php $i++; ?>
-    <?php endforeach; ?>   
+  <?php endforeach; ?>   
   </tbody>
 </table>
 	</div>

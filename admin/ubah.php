@@ -1,5 +1,5 @@
 <?php
-require 'functions.php';
+require '../functions.php';
 
 $id = $_GET['id'];
 $gurus = query("SELECT * FROM guru WHERE id = $id")[0];
@@ -37,27 +37,33 @@ if(isset($_POST['ubah'])){
     <div class="container col-8">
     <H1 style="text-align: center;">Form Ubah Data Guru</H1>
 
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $gurus['id']; ?>">
-        <div class="mb-3">
-    <label for="nama" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="nama_guru" name="nama_guru" required value="<?= $gurus['nama_guru'];?>">
-        </div>
+        <input type="hidden" name="gambarLama" value="<?= $gurus['gambar']; ?>">
     <div class="mb-3">
-    <label for="nim" class="form-label">No Hp</label>
-    <input type="text" class="form-control" id="no_hp" name="no_hp" required value="<?= $gurus['no_hp'];?>">
-        </div>
-    <label for="nim" class="form-label">Deskripsi</label>
-    <input type="text" class="form-control" id="description" name="description" required value="<?= $gurus['description'];?>">
-        <div>
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama_guru" name="nama_guru" required value="<?= $gurus['nama_guru'];?>">
+    </div>
     <div class="mb-3">
-    <label for="nim" class="form-label">Email</label>
-    <input type="text" class="form-control" id="email" name="email"required value="<?= $gurus['email'];?>">
-        </div>
+        <label for="nama" class="form-label">Gambar</label>
+        <input type="file" class="form-control" id="gambar" name="gambar" required value="<?= $gurus['gambar'];?>">
+    </div>
     <div class="mb-3">
-    <label for="jurusan" class="form-label">Kelas</label>
-    <input type="text" class="form-control" id="kelas" name="kelas" required value="<?= $gurus['kelas'];?>">
-        </div>
+        <label for="nim" class="form-label">No Hp</label>
+        <input type="text" class="form-control" id="no_hp" name="no_hp" required value="<?= $gurus['no_hp'];?>">
+    </div>
+    <div class="mb-3">
+        <label for="nim" class="form-label">Deskripsi</label>
+        <input type="text" class="form-control" id="description" name="description" required value="<?= $gurus['description'];?>">
+    </div>
+    <div class="mb-3">
+        <label for="nim" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" name="email"required value="<?= $gurus['email'];?>">
+    </div>
+    <div class="mb-3">
+        <label for="jurusan" class="form-label">Kelas</label>
+        <input type="text" class="form-control" id="kelas" name="kelas" required value="<?= $gurus['kelas'];?>">
+    </div>
         <button type="submit" name="ubah" class="btn btn-primary">Ubah Data</button>
     </form>
     </div>
