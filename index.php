@@ -184,9 +184,9 @@ if( isset($_POST["cari"]) ) {
             <div class="card" style="width: 15rem;">
               <img src="img/teachers/<?= $teacher['gambar'] ?>" class="card-img-top" alt="visual" />
               <div class="card-body">
-                <h3 class="card-title" style="color: rgb(216, 108, 19);"><?= $teacher['kelas'] ?></h3>              
-                <h5 class="card-title" style="color: #000;">Teacher: <?= $teacher['nama_guru'] ?></h5>
-                <p class="card-text"><?= $teacher['description'] ?></p>
+                <h3 class="card-title text-center" style="color: rgb(216, 108, 19);"><?= $teacher['kelas'] ?></h3>              
+                <h5 class="card-title text-center" style="color: #000;">Teacher: <?= $teacher['nama_guru'] ?></h5>
+                <p class="card-text text-center"><?= $teacher['description'] ?></p>
                 <a href="booking.php" class="btn btn-primary position-relative bottom-0 start-50 translate-middle-x">BOOK NOW</a>
               </div>
             </div>
