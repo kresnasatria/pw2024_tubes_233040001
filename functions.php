@@ -87,7 +87,7 @@ return false;
   $namaFileBaru .= '.' ;
   $namaFileBaru .= $ekstensiGambar; 
 
-  move_uploaded_file($tmpName, '../img_teachers/' . $namaFile);
+  move_uploaded_file($tmpName, 'img/teachers/' . $namaFile);
 
   return $namaFile;
 

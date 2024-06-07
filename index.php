@@ -60,7 +60,7 @@ if( isset($_POST["cari"]) ) {
       </div>
     </header>
     <div class="gambar">
-          <img src="img/header5.jpg" alt="hero"/>
+          <img src="img/user/header5.jpg" alt="hero"/>
         </div>
 
         <section class="main-container" id="hero" data-aos="fade-right" data-aos-duration="1800">
@@ -73,7 +73,7 @@ if( isset($_POST["cari"]) ) {
           </div>
           
           <div class="hero-right" data-aos="fade-left" data-aos-duration="2000">
-            <img src="img/logo3.jpg" alt="hero" />
+            <img src="img/user/logo3.jpg" alt="hero" />
           </div>
         </section>
     <!-- END OF HEADER -->
@@ -182,7 +182,7 @@ if( isset($_POST["cari"]) ) {
       ?>
           <div class="col-md-3 mb-3">
             <div class="card" style="width: 15rem;">
-              <img src="img_teachers/<?= $teacher['gambar'] ?>" class="card-img-top" alt="visual" />
+              <img src="img/teachers/<?= $teacher['gambar'] ?>" class="card-img-top" alt="visual" />
               <div class="card-body">
                 <h3 class="card-title" style="color: rgb(216, 108, 19);"><?= $teacher['kelas'] ?></h3>              
                 <h5 class="card-title" style="color: #000;">Teacher: <?= $teacher['nama_guru'] ?></h5>
