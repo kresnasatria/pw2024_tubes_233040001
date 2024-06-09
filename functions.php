@@ -33,14 +33,14 @@ function tambah($data)
   $email = htmlspecialchars($data['email']);    
   $kelas = htmlspecialchars($data['kelas']); 
   
-  // upload gambar
+  // Upload gambar
   $gambar = upload();
   if( !$gambar ) {
     return false;
   }
 
   $query = "INSERT INTO guru
-              VALUES (NULL '$nama', $gambar, '$description', '$hp', '$email', '$kelas')
+              VALUES ('', '$nama', '$gambar', '$description', '$hp', '$email', '$kelas')
            ";
   mysqli_query($conn, $query) or die(mysqli_error($conn));
 
@@ -48,50 +48,49 @@ function tambah($data)
 }
 
 function upload() {
-  $namaFile = $_FILES['gambar'] ['name'];
-  $ukuranFile = $_FILES['gambar'] ['size'];
-  $error = $_FILES['gambar'] ['error'];
-  $tmpName = $_FILES['gambar'] ['tmp_name'];
+  $namaFile = $_FILES['gambar']['name'];
+  $ukuranFile = $_FILES['gambar']['size'];
+  $error = $_FILES['gambar']['error'];
+  $tmpName = $_FILES['gambar']['tmp_name'];
 
-  // cek apakah todak ada gambar yang tidak diupload
+  // Cek untuk masukan gambar terlebih dahulu
   if( $error == 4 ) {
     echo "<script> 
-            alert('pilih gambar terlebih dahulu')
+            alert('Pilih gambar terlebih dahulu')
           </script>";
     return false;
   }
 
-  // cek apakah yang diupload adalah gambar
+  // cek apakah yang dimasukan gambar (jpg, jpeg, png, avif)
   $ekstensiGambarValid = ['jpg', 'jpeg', 'png', 'avif'];
   $ekstensiGambar = explode('.', $namaFile);
   $ekstensiGambar = strtolower(end($ekstensiGambar));
   if( !in_array($ekstensiGambar, $ekstensiGambarValid) ) {
     echo "<script> 
-            alert('yang anda upload bukan gambar')
+            alert('Yang Anda upload bukan gambar')
           </script>";
     return false;
   }
 
-  // cek jika ukuranya terlalu besar 
-  if( $ukuranFile > 30000000 ) {
+  // cek ukuran gambar apakah terlalu besar
+  if( $ukuranFile > 30000000 ) { // 30MB
     echo "<script> 
-            alert('ukuran gambar terlalu besar')
+            alert('Ukuran gambar terlalu besar')
           </script>";
-return false;
+    return false;
   }
 
-  // lolos pengecekan, gambar siap diupload 
-  // generate nama gambar baru
+  // buat nama baru
+  $namaFileBaru = uniqid();
+  $namaFileBaru .= '.';
+  $namaFileBaru .= $ekstensiGambar;
 
-  $namaFileBaru = uniqid(); 
-  $namaFileBaru .= '.' ;
-  $namaFileBaru .= $ekstensiGambar; 
+  // pindah file dengan nama baru
+  move_uploaded_file($tmpName, '../img/teachers/' . $namaFileBaru);
 
-  move_uploaded_file($tmpName, 'img/teachers/' . $namaFile);
-
-  return $namaFile;
-
+  return $namaFileBaru;
 }
+
 
 function hapus($id)
 {
@@ -109,12 +108,11 @@ function ubah($data)
 
   // cek apakah user pilih gambar baru atau tidak
 
-  if( $_FILES['gambar'] ['error'] === 4 ) {
+  if( $_FILES['gambar']['error'] === 4 ) {
     $gambar = $gambarLama;
   } else {
     $gambar = upload();
   }
-  $gambar = htmlspecialchars($data['gambar']);
   $description = htmlspecialchars($data['description']);
   $no_hp = htmlspecialchars($data['no_hp']);
 
@@ -142,6 +140,4 @@ function cari($keyword) {
            ";
   return query($query);  
 }
-
-
 ?>

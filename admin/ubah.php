@@ -45,8 +45,9 @@ if(isset($_POST['ubah'])){
         <input type="text" class="form-control" id="nama_guru" name="nama_guru" required value="<?= $gurus['nama_guru'];?>">
     </div>
     <div class="mb-3">
-        <label for="nama" class="form-label">Gambar</label>
-        <input type="file" class="form-control" id="gambar" name="gambar" required value="<?= $gurus['gambar'];?>">
+        <label for="nama" class="form-label">Gambar</label><br>
+        <img src="../img/teachers/<?= $gurus['gambar'] ?>" width="100" alt=""><br><br>
+        <input type="file" class="form-control" id="gambar" name="gambar" required>
     </div>
     <div class="mb-3">
         <label for="nim" class="form-label">No Hp</label>
