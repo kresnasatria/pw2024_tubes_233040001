@@ -15,7 +15,7 @@ if(isset($_POST['book_now'])) {
     $address = $_POST['address'];
     $class = $_POST['class'];
 
-    // Prepare an insert statement
+    
     $stmt = $conn->prepare("INSERT INTO booking (name, email, phone_number, address, class) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $email, $phone_number, $address, $class);
 
@@ -41,7 +41,7 @@ if(isset($_POST['book_now'])) {
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Booking Form</title>
 
-   <!-- custom css file link  -->
+   
    <link rel="stylesheet" href="css/auth.css">
 
 </head>
