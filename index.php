@@ -1,8 +1,7 @@
 <?php
 require 'functions.php';
-$teachers = query("SELECT * FROM guru" );
-
-if( isset($_POST["cari"]) ) {
+$teachers = query("SELECT * FROM guru");
+if(isset($_POST["cari"])) {
   $teachers = cari($_POST["keyword"]);
 }
 ?>
@@ -181,7 +180,7 @@ if( isset($_POST["cari"]) ) {
       <?php
       foreach( $teachers as $teacher ) :
       ?>
-          <div class="col-md-3 mb-3">
+          <div class="col-md-3 mb-3" method="post">
             <div class="card" style="width: 15rem;">
               <img src="img/teachers/<?= $teacher['gambar'] ?>" class="card-img-top" alt="visual" />
               <div class="card-body">

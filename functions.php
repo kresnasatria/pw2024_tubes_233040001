@@ -136,8 +136,11 @@ function ubah($data)
 function cari($keyword) {
   $query = "SELECT * FROM guru 
              WHERE
-            nama_guru = '$keyword'
+            nama_guru LIKE '%$keyword%' OR
+            email LIKE '%$keyword%' OR
+            kelas LIKE '%$keyword%'
            ";
   return query($query);  
 }
+
 ?>

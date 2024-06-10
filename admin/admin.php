@@ -1,5 +1,5 @@
 <?php
-require 'functions.php';
+require '../functions.php';
 $guru = query("SELECT * FROM guru" );
 
 if( isset($_POST["cari"]) ) {
