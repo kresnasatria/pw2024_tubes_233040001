@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2024 at 05:17 PM
+-- Generation Time: Jun 10, 2024 at 07:57 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,8 @@ CREATE TABLE `booking` (
 INSERT INTO `booking` (`id`, `name`, `email`, `phone_number`, `address`, `class`) VALUES
 (1, 'kresna', 'kresnasatria@gmail.com', '123', 'antapani', 'visual effects'),
 (2, 'moreno', 'moreno@gmail.com', '123', 'antapani', 'visual effects'),
-(15, 'dara', 'dara@gmail.com', '085797385431', 'Cianjur', 'visual effects');
+(15, 'dara', 'dara@gmail.com', '085797385431', 'Cianjur', 'visual effects'),
+(16, 'kresna', 'kresnasatria@gmail.com', '085797385431', 'Cianjur', 'visual effects');
 
 -- --------------------------------------------------------
 
@@ -178,19 +179,19 @@ ALTER TABLE `user_form`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user_form`
 --
 ALTER TABLE `user_form`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
