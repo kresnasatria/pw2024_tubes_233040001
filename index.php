@@ -1,4 +1,10 @@
 <?php
+session_start();
+if( !isset($_SESSION['user_name']) ){
+  header('location: login_form.php');
+  exit;
+}
+
 require 'functions.php';
 $teachers = query("SELECT * FROM guru");
 if(isset($_POST["cari"])) {

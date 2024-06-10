@@ -1,9 +1,7 @@
 <?php
-require 'functions.php';
-
 session_start();
 
-
+require 'functions.php';
 
 if(isset($_POST['submit'])){
    $conn = koneksi();

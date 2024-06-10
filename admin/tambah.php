@@ -1,5 +1,12 @@
 <?php
+session_start();
+if( !isset($_SESSION['admin_name'])){
+  header('location: ../login_form.php');
+  exit;
+}
+
 require '../functions.php';
+
 //jika tombol tambah di klik
 if(isset($_POST['tambah'])){
     // jika data berhasil ditambahkan
