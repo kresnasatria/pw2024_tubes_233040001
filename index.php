@@ -172,10 +172,10 @@ if(isset($_POST["cari"])) {
   $teachers = query('SELECT * FROM guru');    
     ?>
     <!-- TEACHERS  -->
-    <section id="teachers">
+    <section id="teachers" style="background-image: url(img/user/teacher_background.jpg); position: relative; transform: scale(1.1);">
 
     
-      <div class="container pt-5s" style="background: #081b29; border-radius: 20px; padding: 10px 0 10px 50px;" data-aos="fade-up" data-aos-duration-2000>
+      <div class="container pt-5s" style="background: #081b29; border-radius: 20px; padding: 10px 0 10px 50px; margin-top: 80px;" data-aos="fade-up" data-aos-duration-2000>
         <div class="row text-center">
           <div class="col" style="color: rgb(221, 97, 8);"  data-aos="fade-up" data-aos-duration-3000>
             <h3 class="fw-bold" style="color: rgb(216, 108, 19); margin-top: 15px; margin-left: -50px;">TEACHERS</h3>
