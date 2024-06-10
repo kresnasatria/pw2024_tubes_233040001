@@ -6,6 +6,7 @@ if( !isset($_SESSION['user_name']) ){
 }
 
 require 'functions.php';
+
 $teachers = query("SELECT * FROM guru");
 if(isset($_POST["cari"])) {
   $teachers = cari($_POST["keyword"]);
